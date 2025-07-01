@@ -1,5 +1,65 @@
 @import "https://www.nerdfonts.com/assets/css/webfont.css";
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-family: "Public Sans", san-serif;
+  --linen: #fff1e8;
+  --summer: #70cdde;
+  --saiyan: #ffdc02;
+  --mana: #ff5052;
+  --white: white;
+
+  --amber: #febf1d;
+  --dawn: #f4ba25;
+  --black-hole: #030201;
+  --olive: #403f36;
+  --nickel: #939491;
+  --gecko: #a09a2f;
+  --redstone: #db706c;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--summer);
+  font-family: var(--font-family);
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  width: 700px;
+  height: 800px;
+  padding: 4rem;
+
+  background-color: var(--linen);
+  /* border-radius: 10px; */
+  border: 3px solid black;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container:hover {
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 1);
+  transition: 0.3s ease;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
 #container {
   display: flex;
   flex-direction: column;
@@ -8,8 +68,11 @@
   max-width: 600px;
 }
 
-#input,
-#results,
+.text:focus {
+  outline: none;
+}
+
+.text,
 #text-container {
   width: 100%;
 }
@@ -20,22 +83,52 @@
   gap: 1rem;
 }
 
-#results,
-#input {
+.text:hover {
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 1);
+}
+
+.text {
+  background-color: var(--white);
+  transition: 0.3s ease;
+  transform: scale(1.02);
+
   height: 50px;
+  padding: 2rem;
+
   font-size: 2rem;
-  border-radius: 10px;
-  border: 1px solid black;
+  /* border-radius: 10px; */
+  border: 2px solid black;
+  font-family: var(--font-family);
 }
 
 .button {
+  font-family: var(--font-family);
   width: 100px;
   height: 100px;
+  font-weight: bold;
 
   font-size: 3rem;
+  cursor: pointer;
 
-  border-radius: 10px;
-  border: 1px solid black;
+  /* border-radius: 10px; */
+  border: 3px solid black;
+  background-color: var(--white);
+}
+
+.button:hover {
+  transition: 0.3s ease;
+  transform: scale(1.02);
+
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 1);
+  background-color: var(--nickel);
+}
+
+.special:hover {
+  background-color: var(--mana);
+}
+
+.special2:hover {
+  background-color: var(--saiyan);
 }
 
 #utils-container,
